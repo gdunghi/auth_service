@@ -14,7 +14,6 @@ const apiRoutes = express.Router();
 
 const userRoute = require("./app/routes/user");
 
-
 let port = process.env.PORT || 8081;
 mongoose.connect(config.database);
 app.set('superSecret', config.secret);

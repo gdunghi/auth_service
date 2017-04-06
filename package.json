@@ -2,7 +2,7 @@
   "name": "auth_service",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "NODE_ENV=development ./node_modules/.bin/nodemon server.js"
   },
   "version": "1.0.0",
   "author": "jirayu",
@@ -17,6 +17,12 @@
     "cors": "^2.8.1"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.3.0",
+    "mongoose": "^4.9.3",
+    "morgan": "^1.8.1",
+    "cors": "^2.8.1"
   }
 }
