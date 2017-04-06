@@ -1,13 +1,12 @@
 "use strict";
 const jwt = require("jsonwebtoken");
-
-
+const config = require('../../config'); // get our config file
 let verify = (req, res, next) => {
 
     let token = req.headers['x-auth-token'];
     if (token) {
         try {
-            let payload = jwt.verify(token, "ilovescotchyscotch");
+            let payload = jwt.verify(token, config.secret);
             req.headers.token = payload;
             next();
         } catch (ex) {
